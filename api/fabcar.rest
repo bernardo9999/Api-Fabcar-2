@@ -1,0 +1,36 @@
+
+GET http://localhost:8000/fabcar/getAll HTTP/1.1
+content-type: application/json
+###
+
+GET http://localhost:8000/fabcar/queryOne/CAR10 HTTP/1.1
+content-type: application/json
+###
+
+POST http://localhost:8000/fabcar/init/ HTTP/1.1
+content-type: application/json
+###
+PUT http://localhost:8000/fabcar/changeOwner/CAR10 HTTP/1.1
+content-type: application/json
+
+{ 
+    "owner": "Bernie"
+}
+
+###
+POST http://localhost:8000/fabcar/create/ HTTP/1.1
+content-type: application/json
+
+{ 
+    "id": "CAR10",
+    "make": "Brasilia",
+    "model": "Classic",
+    "colour": "pink",
+    "owner": "Chuchuzinho"
+}
+###
+DELETE http://localhost:8000/fabcar/delete/CAR10 HTTP/1.1
+###
+GET http://localhost:8000/fabcar/getHistoryCar/CAR10 HTTP/1.1
+content-type: application/json
+###
